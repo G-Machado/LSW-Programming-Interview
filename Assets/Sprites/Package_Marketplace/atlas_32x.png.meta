@@ -218,7 +218,7 @@ TextureImporter:
         width: 60
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,6 +226,48 @@ TextureImporter:
       bones: []
       spriteID: 5fd257f215cde48fb8a065a306b726c2
       internalID: 1582235727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_32x_6
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 132
+        width: 61
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e30fe25030249d4a358d95ed9780de
+      internalID: 1576191054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_32x_7
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 416
+        width: 36
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6398c1de5304254a24df44542926b0
+      internalID: 195334938
       vertices: []
       indices: 
       edges: []
@@ -247,6 +289,8 @@ TextureImporter:
       atlas_32x_3: -1927112922
       atlas_32x_4: -1087415970
       atlas_32x_5: 1582235727
+      atlas_32x_6: 1576191054
+      atlas_32x_7: 195334938
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
