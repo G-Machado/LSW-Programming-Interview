@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager instance;
+    private void Awake()
+    {
+        instance = this; 
+    }
+
     public float speed;
     private Rigidbody2D rb;
     private Animator anim;
+    [HideInInspector]
+    public GameObject equippedItem;
+    public InventoryManager inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +37,6 @@ public class PlayerManager : MonoBehaviour
 
         rb.velocity = finalVel * speed;
 
-        Debug.Log(finalVel.magnitude);
         anim.SetFloat("MovementBlend", finalVel.magnitude);
     }
 
