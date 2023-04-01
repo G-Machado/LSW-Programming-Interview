@@ -2,22 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
+using UnityEngine.Events;
 
-public static class TransactionManager
+public class TransactionManager : MonoBehaviour
 {
+    public static TransactionManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    public UnityEvent onTransaction;
+
     public static void PurchaseTransaction(
         InventoryManager buyer,
         InventoryManager seller,
         ScriptableItem Item
         )
     {
+        Debug.Log(Item.title);
+
        if(buyer.coinAmount > Item.price &&
             seller.inventory.Contains(Item))
         {
             buyer.BuyItem(Item);
             seller.SellItem(Item);
+
+            instance.onTransaction.Invoke();
         }
     }
+
 
     public static void SellTransaction(
         InventoryManager buyer,
@@ -29,6 +43,8 @@ public static class TransactionManager
         {
             buyer.BuyItem(Item);
             seller.SellItem(Item);
+
+            instance.onTransaction.Invoke();
         }
     }
 }

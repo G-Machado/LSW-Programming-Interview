@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RedFighter
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  title: 
+  title: Red
   description: 
-  price: 0
+  price: 64

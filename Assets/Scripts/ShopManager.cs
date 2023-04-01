@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ShopManager : MonoBehaviour
 {
     public InventoryManager shopInventory;
+    public GameObject shopPanel;
     private Animator anim;
     private void Start()
     {
@@ -33,11 +35,13 @@ public class ShopManager : MonoBehaviour
     public void OpenShop()
     {
         isOpened = true;
+        shopPanel.SetActive(true);
     }
 
     public void CloseShop()
     {
         isOpened = false;
+        shopPanel.SetActive(false);
     }
 
     public void TriggerShop()

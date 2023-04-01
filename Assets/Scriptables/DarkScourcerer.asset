@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DarkScourcerer
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  title: 
+  title: 'Dark '
   description: 
-  price: 0
+  price: 100

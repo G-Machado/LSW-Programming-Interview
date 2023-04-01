@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FrozenWizard
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  title: 
+  title: Frozen
   description: 
-  price: 0
+  price: 43
