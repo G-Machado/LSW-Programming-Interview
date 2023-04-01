@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9a8e9726a15a43e9b8a11d5630e45e0, type: 3}
-  m_Name: FrozenWizard
+  m_Name: Naked
   m_EditorClassIdentifier: 
-  icon: {fileID: 1672653913, guid: 07f8b76b458a244ff8f6f3289e3543b4, type: 3}
-  title: Frozen
+  icon: {fileID: 190270732, guid: bda18e50c126642919247dc2d3836ced, type: 3}
+  title: Naked
   description: 
-  price: 43
-  prefab: {fileID: 0}
+  price: 0
+  prefab: {fileID: 775600283422383340, guid: c93cc372d859740d9921dbe1c860f3ba, type: 3}

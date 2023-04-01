@@ -12,9 +12,7 @@ public class PlayerManager : MonoBehaviour
 
     public float speed;
     private Rigidbody2D rb;
-    private Animator anim;
-    [HideInInspector]
-    public GameObject equippedItem;
+    public Animator anim;
     public InventoryManager inventory;
 
     public GameObject InventoryUI;

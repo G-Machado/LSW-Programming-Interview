@@ -9,4 +9,5 @@ public class ScriptableItem : ScriptableObject
     public string title;
     public string description;
     public float price;
+    public GameObject prefab;
 }

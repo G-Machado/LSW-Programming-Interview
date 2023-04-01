@@ -11,6 +11,6 @@ public class ScriptableEquipable : ScriptableObject
 
     public void Equip(PlayerManager player)
     {
-        Destroy(player.equippedItem);
+        //Destroy(player.equippedItem);
     }
 }
