@@ -16,4 +16,4 @@ MonoBehaviour:
   title: Frozen
   description: 
   price: 43
-  prefab: {fileID: 0}
+  prefab: {fileID: 8780673905858782592, guid: 6f895dd0aef0b4ebf874bfd502719685, type: 3}

@@ -16,4 +16,4 @@ MonoBehaviour:
   title: 'Dark '
   description: 
   price: 100
-  prefab: {fileID: 0}
+  prefab: {fileID: 2305541360860167285, guid: 3c6e8ced1028c4a30a0a93f138b9f4ed, type: 3}

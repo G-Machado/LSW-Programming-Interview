@@ -35,8 +35,15 @@ public class PanelUIManager : MonoBehaviour
             itemUI.transform.Find("Price").GetComponent<Text>().text = $"${item.price}";
 
             int index = i;
-            itemUI.transform.Find("ActionButton").GetComponent<Button>().onClick.AddListener(
+            Button[] actionButtons = itemUI.transform.GetComponentsInChildren<Button>();
+            for (int j = 0; j < actionButtons.Length; j++)
+            {
+                if (j < 1) actionButtons[j].gameObject.SetActive(true);
+                else actionButtons[j].gameObject.SetActive(false);
+
+                actionButtons[j].onClick.AddListener(
                 delegate { action.Invoke(index); });
+            }
         }
 
         itemContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(0,shopInventory.inventory.Count * 117);
