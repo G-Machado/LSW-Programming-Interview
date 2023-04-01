@@ -20,8 +20,6 @@ public class TransactionManager : MonoBehaviour
         ScriptableItem Item
         )
     {
-        Debug.Log(Item.title);
-
        if(buyer.coinAmount > Item.price &&
             seller.inventory.Contains(Item))
         {

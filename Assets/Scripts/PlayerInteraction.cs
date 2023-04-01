@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
 {
     public KeyCode interactionKey = KeyCode.E;
     public UnityEvent onInteraction; 
+    public UnityEvent onAreaLeave;
 
     private bool isInsideTrigger = false;
 
@@ -23,6 +24,7 @@ public class PlayerInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isInsideTrigger = false;
+            onAreaLeave.Invoke();
         }
     }
 

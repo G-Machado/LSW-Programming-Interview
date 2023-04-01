@@ -13,6 +13,13 @@ public class ShopManager : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
     }
 
+    public void ProcessPurchase(int index)
+    {
+        TransactionManager.PurchaseTransaction(
+            PlayerManager.instance.inventory,
+            shopInventory,
+            shopInventory.inventory[index]);
+    }
     public void ProcessPurchase(ScriptableItem item)
     {
         TransactionManager.PurchaseTransaction(
@@ -20,6 +27,14 @@ public class ShopManager : MonoBehaviour
             shopInventory,
             item);
     }
+    public void ProcessSell(int index)
+    {
+        TransactionManager.SellTransaction(
+            shopInventory,
+            PlayerManager.instance.inventory,
+            PlayerManager.instance.inventory.inventory[index]);
+    }
+
     public void ProcessSell(ScriptableItem item)
     {
         TransactionManager.SellTransaction(

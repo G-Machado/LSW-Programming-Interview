@@ -17,6 +17,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject equippedItem;
     public InventoryManager inventory;
 
+    public GameObject InventoryUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +34,16 @@ public class PlayerManager : MonoBehaviour
             Input.GetAxis("Vertical")
             );
 
-        //if(finalVel.magnitude > .5f) rb.velocity = finalVel * speed;
-        //else rb.velocity = Vector2.zero;
-
         rb.velocity = finalVel * speed;
 
         anim.SetFloat("MovementBlend", finalVel.magnitude);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            InventoryUI.SetActive(!InventoryUI.activeSelf);
+        }
+    }
 }

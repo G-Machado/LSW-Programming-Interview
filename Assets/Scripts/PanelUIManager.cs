@@ -5,12 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using static UnityEditor.Progress;
 
-public class ShopUIManager : MonoBehaviour
+public class PanelUIManager : MonoBehaviour
 {
     public InventoryManager shopInventory;
     public Transform itemContainer; 
     public GameObject itemPrefab;
-     UnityEvent<int> action;
+    public UnityEvent<int> action;
 
     void Start()
     {
@@ -33,6 +33,10 @@ public class ShopUIManager : MonoBehaviour
             itemUI.transform.Find("Icon").GetComponent<Image>().sprite = item.icon;
             itemUI.transform.Find("Title").GetComponent<Text>().text = item.title;
             itemUI.transform.Find("Price").GetComponent<Text>().text = $"${item.price}";
+
+            int index = i;
+            itemUI.transform.Find("ActionButton").GetComponent<Button>().onClick.AddListener(
+                delegate { action.Invoke(index); });
         }
 
         itemContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(0,shopInventory.inventory.Count * 117);
