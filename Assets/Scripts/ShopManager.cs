@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class ShopManager : MonoBehaviour
 {
@@ -68,9 +67,9 @@ public class ShopManager : MonoBehaviour
         else OpenShop();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        animFactor *= .993f;
+        animFactor *= .9f;
         keeperAnim.SetFloat("MovementBlend",animFactor);
     }
 }
