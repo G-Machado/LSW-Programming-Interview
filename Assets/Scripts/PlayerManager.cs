@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
     public InventoryManager inventory;
 
     public GameObject InventoryUI;
+    public Animator inventoryUIAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            InventoryUI.SetActive(!InventoryUI.activeSelf);
+            inventoryUIAnim.SetBool("opened", !inventoryUIAnim.GetBool("opened"));
         }
     }
 }

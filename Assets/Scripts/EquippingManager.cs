@@ -16,6 +16,7 @@ public class EquippingManager : MonoBehaviour
     public GameObject equippedItem;
     public ScriptableItem nakedSkin;
     public string equippedTitle;
+    public Animator inventoryUIAnim;
 
     public UnityEvent onEquip;
 

@@ -7,11 +7,12 @@ public class ShopManager : MonoBehaviour
 {
     public InventoryManager shopInventory;
     public GameObject shopPanel;
-    private Animator anim;
+    public Animator keeperAnim;
+    public Animator uiAnim;
     private float animFactor;
     private void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        keeperAnim = GetComponentInChildren<Animator>();
     }
 
     public void ProcessPurchase(int index)
@@ -46,21 +47,19 @@ public class ShopManager : MonoBehaviour
             item);
     }
 
-    //
-
     public bool isOpened = false;
 
     public void OpenShop()
     {
+        uiAnim.SetBool("opened", true);
         animFactor = 1;
         isOpened = true;
-        shopPanel.SetActive(true);
     }
 
     public void CloseShop()
     {
+        uiAnim.SetBool("opened", false);
         isOpened = false;
-        shopPanel.SetActive(false);
     }
 
     public void TriggerShop()
@@ -72,6 +71,6 @@ public class ShopManager : MonoBehaviour
     private void Update()
     {
         animFactor *= .993f;
-        anim.SetFloat("MovementBlend",animFactor);
+        keeperAnim.SetFloat("MovementBlend",animFactor);
     }
 }
