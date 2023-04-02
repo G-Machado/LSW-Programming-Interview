@@ -1032,6 +1032,9 @@ MonoBehaviour:
   onTransaction:
     m_PersistentCalls:
       m_Calls: []
+  onSell:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &401126437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2689,6 +2692,9 @@ MonoBehaviour:
   equippedItem: {fileID: 0}
   nakedSkin: {fileID: 11400000, guid: 3a6cc8dd3fb7a4545a9f0bc824fd60fe, type: 2}
   equippedTitle: 
+  onEquip:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &905926161
 GameObject:
   m_ObjectHideFlags: 0
@@ -5549,7 +5555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -568, y: 142}
+  m_AnchoredPosition: {x: -565, y: 162}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2054542908

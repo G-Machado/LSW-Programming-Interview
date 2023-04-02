@@ -10,14 +10,27 @@ public class SwitchTitles : MonoBehaviour
 
     void Start()
     {
-        button1.onClick.AddListener(SwitchTitle);
-        button2.onClick.AddListener(SwitchTitle);
+        button1.onClick.AddListener(SwitchTitle2);
+        button2.onClick.AddListener(SwitchTitle1);
+        UpdateTitleAndButtons();
+
+        EquippingManager.instance.onEquip.AddListener(DefaultTitle);
+    }
+
+    void SwitchTitle1()
+    {
+        isTitle1Active = true;
+        UpdateTitleAndButtons();
+    }
+    void SwitchTitle2()
+    {
+        isTitle1Active = false;
         UpdateTitleAndButtons();
     }
 
-    void SwitchTitle()
+    void DefaultTitle()
     {
-        isTitle1Active = !isTitle1Active;
+        isTitle1Active = true;
         UpdateTitleAndButtons();
     }
 

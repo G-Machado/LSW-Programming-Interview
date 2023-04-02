@@ -13,6 +13,7 @@ public class TransactionManager : MonoBehaviour
     }
 
     public UnityEvent onTransaction;
+    public UnityEvent<ScriptableItem> onSell;
 
     public static void PurchaseTransaction(
         InventoryManager buyer,
@@ -21,7 +22,8 @@ public class TransactionManager : MonoBehaviour
         )
     {
        if(buyer.coinAmount > Item.price &&
-            seller.inventory.Contains(Item))
+            seller.inventory.Contains(Item) &&
+            !buyer.inventory.Contains(Item))
         {
             buyer.BuyItem(Item);
             seller.SellItem(Item);
@@ -43,6 +45,7 @@ public class TransactionManager : MonoBehaviour
             seller.SellItem(Item);
 
             instance.onTransaction.Invoke();
+            instance.onSell.Invoke(Item);
         }
     }
 }

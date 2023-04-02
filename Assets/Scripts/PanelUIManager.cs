@@ -12,10 +12,14 @@ public class PanelUIManager : MonoBehaviour
     public GameObject itemPrefab;
     public UnityEvent<int> action;
 
-    void Start()
+    private void Awake()
     {
         TransactionManager.instance.onTransaction.AddListener(UpdateUI);
         UpdateUI();
+    }
+
+    void Start()
+    {
     }
 
     public void UpdateUI()
