@@ -18,10 +18,6 @@ public class PanelUIManager : MonoBehaviour
         UpdateUI();
     }
 
-    void Start()
-    {
-    }
-
     public void UpdateUI()
     {
         foreach (Transform child in itemContainer)
@@ -50,6 +46,6 @@ public class PanelUIManager : MonoBehaviour
             }
         }
 
-        itemContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(0,shopInventory.inventory.Count * 117);
+        itemContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(0,shopInventory.inventory.Count * 127);
     }
 }

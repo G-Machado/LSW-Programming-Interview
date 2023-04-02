@@ -1,27 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public List<ScriptableItem> inventory; // List of items in the inventory
-    public float coinAmount; // Amount of currency
+    public List<ScriptableItem> inventory;
+    public float coinAmount; 
+    public Text amountText;
+
+    private void Start()
+    {
+        if (amountText)
+            amountText.text = $"${coinAmount}";
+    }
 
     public void BuyItem(ScriptableItem item)
     {
-        // Deduct the item price from the player's coins
         coinAmount -= item.price;
+        if (amountText)
+            amountText.text = $"${coinAmount}";
 
-        // Add the item to the inventory
         inventory.Add(item);
     }
 
     public void SellItem(ScriptableItem item)
     {
-        // Add the item price to the player's coins
         coinAmount += item.price;
+        if(amountText)
+            amountText.text = $"${coinAmount}";
 
-        // Remove the item from the inventory
         inventory.Remove(item);
     }
 }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9a8e9726a15a43e9b8a11d5630e45e0, type: 3}
-  m_Name: FrozenWizard
+  m_Name: BlueCrystal
   m_EditorClassIdentifier: 
-  icon: {fileID: 1672653913, guid: 07f8b76b458a244ff8f6f3289e3543b4, type: 3}
-  title: Frost Wizard
+  icon: {fileID: 986240241, guid: 209abdf6fefc0415ebb2ef681775c941, type: 3}
+  title: Blue Shard
   description: 
-  price: 43
-  prefab: {fileID: 8780673905858782592, guid: 6f895dd0aef0b4ebf874bfd502719685, type: 3}
+  price: 300
+  prefab: {fileID: 1737744484889250640, guid: 6c8c34be047c6444898b8447c9f6ceb2, type: 3}

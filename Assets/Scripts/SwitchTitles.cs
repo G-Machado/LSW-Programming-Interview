@@ -6,37 +6,37 @@ public class SwitchTitles : MonoBehaviour
     public Button button1;
     public Button button2;
 
-    private bool isTitle1Active = true;
+    private bool isButton1Active = true;
 
     void Start()
     {
-        button1.onClick.AddListener(SwitchTitle2);
-        button2.onClick.AddListener(SwitchTitle1);
-        UpdateTitleAndButtons();
+        button1.onClick.AddListener(SwitchButton2);
+        button2.onClick.AddListener(SwtichButton1);
+        UpdateButtons();
 
         EquippingManager.instance.onEquip.AddListener(DefaultTitle);
     }
 
-    void SwitchTitle1()
+    void SwtichButton1()
     {
-        isTitle1Active = true;
-        UpdateTitleAndButtons();
+        isButton1Active = true;
+        UpdateButtons();
     }
-    void SwitchTitle2()
+    void SwitchButton2()
     {
-        isTitle1Active = false;
-        UpdateTitleAndButtons();
+        isButton1Active = false;
+        UpdateButtons();
     }
 
     void DefaultTitle()
     {
-        isTitle1Active = true;
-        UpdateTitleAndButtons();
+        isButton1Active = true;
+        UpdateButtons();
     }
 
-    void UpdateTitleAndButtons()
+    void UpdateButtons()
     {
-        if (isTitle1Active)
+        if (isButton1Active)
         {
             button1.gameObject.SetActive(true);
             button2.gameObject.SetActive(false);

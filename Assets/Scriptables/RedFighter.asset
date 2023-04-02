@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedFighter
   m_EditorClassIdentifier: 
   icon: {fileID: -862407419, guid: 07f8b76b458a244ff8f6f3289e3543b4, type: 3}
-  title: Red
+  title: Red Punch
   description: 
   price: 64
   prefab: {fileID: 2626495836048052488, guid: b6e1c56c113b74603b2d6dc789759887, type: 3}
