@@ -47,7 +47,5 @@ public class PanelUIManager : MonoBehaviour
         }
 
         itemContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(0,shopInventory.inventory.Count * 117);
-
-        Debug.Log("updated ui");
     }
 }

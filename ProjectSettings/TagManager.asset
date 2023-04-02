@@ -50,6 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 3251740493
     locked: 0
+  - name: roof
+    uniqueID: 2843112809
+    locked: 0
   - name: UI
     uniqueID: 515689395
     locked: 0

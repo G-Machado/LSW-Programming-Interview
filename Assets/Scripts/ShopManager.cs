@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour
     public InventoryManager shopInventory;
     public GameObject shopPanel;
     private Animator anim;
+    private float animFactor;
     private void Start()
     {
         anim = GetComponentInChildren<Animator>();
@@ -15,6 +16,7 @@ public class ShopManager : MonoBehaviour
 
     public void ProcessPurchase(int index)
     {
+        animFactor = 1;
         TransactionManager.PurchaseTransaction(
             PlayerManager.instance.inventory,
             shopInventory,
@@ -29,6 +31,7 @@ public class ShopManager : MonoBehaviour
     }
     public void ProcessSell(int index)
     {
+        animFactor = 1;
         TransactionManager.SellTransaction(
             shopInventory,
             PlayerManager.instance.inventory,
@@ -49,6 +52,7 @@ public class ShopManager : MonoBehaviour
 
     public void OpenShop()
     {
+        animFactor = 1;
         isOpened = true;
         shopPanel.SetActive(true);
     }
@@ -63,5 +67,11 @@ public class ShopManager : MonoBehaviour
     {
         if (isOpened) CloseShop();
         else OpenShop();
+    }
+
+    private void Update()
+    {
+        animFactor *= .993f;
+        anim.SetFloat("MovementBlend",animFactor);
     }
 }
